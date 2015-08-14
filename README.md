@@ -22,6 +22,10 @@ None
 
 None
 
+## Recommended
+
+* `ansible-autossh-tunnel-client` ([see](https://github.com/Oefenweb/ansible-autossh-tunnel-client))
+
 #### Example
 
 ```yaml
