@@ -5,8 +5,3 @@
   sudo: true
   roles:
     - ../../
-  vars:
-    autossh_tunnel_server_groups:
-      - ssh_users
-    autossh_tunnel_server_authorized_keys:
-      - src: ../../../files/persistent-mysql-tunnel/etc/autossh/id_rsa.pub
