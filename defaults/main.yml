@@ -3,4 +3,5 @@
 autossh_tunnel_server_user: autossh
 autossh_tunnel_server_group: autossh
 autossh_tunnel_server_groups: []
+autossh_tunnel_server_shell: /bin/false
 autossh_tunnel_server_authorized_keys: []

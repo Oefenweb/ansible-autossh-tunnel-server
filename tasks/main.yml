@@ -13,6 +13,7 @@
     name: "{{ autossh_tunnel_server_user }}"
     group: "{{ autossh_tunnel_server_group }}"
     groups: "{{ autossh_tunnel_server_groups | join(',') }}"
+    shell: "{{ autossh_tunnel_server_shell }}"
   tags: [configuration, autossh-tunnel-server, autossh-tunnel-server-add-user]
 
 - name: create authorized_keys from public key

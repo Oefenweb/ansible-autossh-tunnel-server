@@ -13,6 +13,7 @@ None
 * `autossh_tunnel_server_user`: [default: `autossh`]: The user that will accept the `autossh` connection
 * `autossh_tunnel_server_group`: [default: `autossh`]: The primary group of the `autossh` user
 * `autossh_tunnel_server_groups`: [default: `[ssh_users]`]: The secondary groups of the `autossh` user
+* `autossh_tunnel_server_shell`: [default: `/bin/false`]: The shell of the `autossh` user
 
 * `autossh_tunnel_server_authorized_keys`: [default: `[]`]: Authorized key declarations
 * `autossh_tunnel_server_authorized_keys.{n}.src`: [required]: The local path of the key
