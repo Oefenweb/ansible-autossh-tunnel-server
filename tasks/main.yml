@@ -4,9 +4,12 @@
   group:
     name: "{{ item }}"
   with_flattened:
-    - autossh_tunnel_server_group
-    - autossh_tunnel_server_groups
-  tags: [configuration, autossh-tunnel-server, autossh-tunnel-server-add-group]
+    - "{{ autossh_tunnel_server_group }}"
+    - "{{ autossh_tunnel_server_groups }}"
+  tags:
+    - configuration
+    - autossh-tunnel-server
+    - autossh-tunnel-server-add-group
 
 - name: add user
   user:
@@ -14,12 +17,18 @@
     group: "{{ autossh_tunnel_server_group }}"
     groups: "{{ autossh_tunnel_server_groups | join(',') }}"
     shell: "{{ autossh_tunnel_server_shell }}"
-  tags: [configuration, autossh-tunnel-server, autossh-tunnel-server-add-user]
+  tags:
+    - configuration
+    - autossh-tunnel-server
+    - autossh-tunnel-server-add-user
 
 - name: create authorized_keys from public key
   authorized_key:
     user: "{{ autossh_tunnel_server_user }}"
     key: "{{ lookup('file', item.src) }}"
     state: "{{ item.state | default('present') }}"
-  with_items: autossh_tunnel_server_authorized_keys
-  tags: [configuration, autossh-tunnel-server, autossh-tunnel-server-authorized-keys]
+  with_items: "{{ autossh_tunnel_server_authorized_keys }}"
+  tags:
+    - configuration
+    - autossh-tunnel-server
+    - autossh-tunnel-server-authorized-keys
