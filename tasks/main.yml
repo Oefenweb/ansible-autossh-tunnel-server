@@ -3,6 +3,7 @@
 - name: add group
   group:
     name: "{{ item }}"
+    system: true
   with_flattened:
     - "{{ autossh_tunnel_server_group }}"
     - "{{ autossh_tunnel_server_groups }}"
@@ -14,6 +15,7 @@
 - name: add user
   user:
     name: "{{ autossh_tunnel_server_user }}"
+    system: true
     group: "{{ autossh_tunnel_server_group }}"
     groups: "{{ autossh_tunnel_server_groups | join(',') }}"
     shell: "{{ autossh_tunnel_server_shell }}"
