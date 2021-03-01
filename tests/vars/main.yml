@@ -1,0 +1,8 @@
+# vars file for autossh-tunnel-server
+---
+autossh_tunnel_server_authorized_keys:
+  - src: "{{ autossh_tunnel_server_public_key_file }}"
+
+autossh_tunnel_server_ssh_directory: "{{ playbook_dir }}/../files"
+autossh_tunnel_server_private_key_file: "{{ autossh_tunnel_server_ssh_directory }}/id_rsa"
+autossh_tunnel_server_public_key_file: "{{ autossh_tunnel_server_private_key_file }}.pub"
