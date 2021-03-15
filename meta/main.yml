@@ -1,6 +1,7 @@
-# meta file for autossh-tunnel-server
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: autossh-tunnel-server
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

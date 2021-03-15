@@ -1,4 +1,4 @@
-# tasks file for autossh-tunnel-server
+# tasks file
 ---
 - name: add group
   group:

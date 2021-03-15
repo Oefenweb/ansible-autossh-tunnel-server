@@ -1,4 +1,4 @@
-# vars file for autossh-tunnel-server
+# vars file
 ---
 autossh_tunnel_server_authorized_keys:
   - src: "{{ autossh_tunnel_server_public_key_file }}"
