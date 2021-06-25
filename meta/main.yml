@@ -2,7 +2,7 @@
 ---
 galaxy_info:
   namespace: oefenweb
-  role_name: autossh-tunnel-server
+  role_name: autossh_tunnel_server
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up a persistent tunnel (using autossh) in Debian-like systems (server side)

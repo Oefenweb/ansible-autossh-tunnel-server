@@ -1,7 +1,7 @@
 ## autossh-tunnel-server
 
 [![CI](https://github.com/Oefenweb/ansible-autossh-tunnel-server/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-autossh-tunnel-server/actions?query=workflow%3ACI)
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-autossh--tunnel--server-blue.svg)](https://galaxy.ansible.com/Oefenweb/autossh-tunnel-server)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-autossh--tunnel--server-blue.svg)](https://galaxy.ansible.com/Oefenweb/autossh_tunnel_server)
 
 Set up a persistent tunnel (using `autossh`) in Debian-like systems (server side).
 
