@@ -1,14 +1,14 @@
 # pre test file
 ---
 - name: install dependencies
-  apt:
+  ansible.builtin.apt:
     name:
       - openssh-client
     state: "{{ apt_install_state | default('latest') }}"
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
 
 - name: generate ssh key
-  command: >
+  ansible.builtin.command: >
     ssh-keygen -t rsa -b 2048 -C '' -P '' -f {{ autossh_tunnel_server_private_key_file }} -q
   args:
     creates: "{{ autossh_tunnel_server_private_key_file }}"

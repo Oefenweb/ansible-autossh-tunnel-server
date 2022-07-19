@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: add group
-  group:
+  ansible.builtin.group:
     name: "{{ item }}"
     system: true
   with_flattened:
@@ -13,7 +13,7 @@
     - autossh-tunnel-server-add-group
 
 - name: add user
-  user:
+  ansible.builtin.user:
     name: "{{ autossh_tunnel_server_user }}"
     system: true
     group: "{{ autossh_tunnel_server_group }}"
@@ -25,7 +25,7 @@
     - autossh-tunnel-server-add-user
 
 - name: create authorized_keys from public key
-  authorized_key:
+  ansible.posix.authorized_key:
     user: "{{ autossh_tunnel_server_user }}"
     key: "{{ lookup('file', item.src) }}"
     state: "{{ item.state | default('present') }}"
