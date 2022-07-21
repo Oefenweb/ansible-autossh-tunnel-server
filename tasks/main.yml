@@ -4,9 +4,7 @@
   ansible.builtin.group:
     name: "{{ item }}"
     system: true
-  with_flattened:
-    - "{{ autossh_tunnel_server_group }}"
-    - "{{ autossh_tunnel_server_groups }}"
+  with_items: "{{ [autossh_tunnel_server_group] + autossh_tunnel_server_groups }}"
   tags:
     - configuration
     - autossh-tunnel-server
