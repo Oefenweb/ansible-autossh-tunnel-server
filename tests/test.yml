@@ -7,6 +7,6 @@
     - name: include vars
       ansible.builtin.include_vars: "{{ playbook_dir }}/vars/main.yml"
     - name: include tasks
-      ansible.builtin.include: "{{ playbook_dir }}/tasks/pre.yml"
+      ansible.builtin.import_tasks: "{{ playbook_dir }}/tasks/pre.yml"
   roles:
     - ../../
