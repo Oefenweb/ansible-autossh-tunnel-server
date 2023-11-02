@@ -34,7 +34,7 @@ None
 ---
 - hosts: all
   roles:
-    - autossh-tunnel-server
+    - oefenweb.autossh-tunnel-server
   vars:
     autossh_tunnel_server_groups:
       - ssh_users
